@@ -14,6 +14,10 @@ data "aws_ami" "fetch_ami" {
   }
 }
 
+locals {
+  insta = "t2.micro"
+}
+
 # Creating the Ansible Control machine #
 
 resource "aws_instance" "control" {
@@ -23,6 +27,3 @@ resource "aws_instance" "control" {
     name = "Ansible_Control_Node"
 }
  
-locals {
-  insta = "t2.micro"
-}
