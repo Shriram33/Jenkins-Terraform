@@ -25,5 +25,5 @@ resource "aws_instance" "control" {
   instance_type = local.insta
   tags = {
     name = "Ansible_Control_Node"
+  }
 }
- 
